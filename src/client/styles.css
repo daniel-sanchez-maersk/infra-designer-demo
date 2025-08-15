@@ -1,0 +1,22 @@
+
+:root { --bg:#0b1020; --panel:rgba(255,255,255,.08); --accent:#7bdaf3; --ok:#30d158; --warn:#ff9f0a; --err:#ff453a; }
+html, body { height:100%; margin:0; background: radial-gradient(1200px 800px at 20% 10%, #1a2250, var(--bg)); color:#e8eefc; font:14px/1.4 ui-sans-serif, system-ui, -apple-system; }
+.app { display:grid; grid-template-columns: 320px 1fr 340px; height:100vh; gap:14px; padding:14px; }
+.panel { background: var(--panel); backdrop-filter: blur(12px) saturate(140%); border:1px solid rgba(255,255,255,.12); border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,.25); }
+.sidebar, .inspector { padding:12px; overflow:auto; }
+.canvas { position:relative; background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.06)); }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.res img { width:44px; height:44px; }
+.res { padding:8px; }
+.block { position:absolute; cursor:grab; user-select:none; border-radius:12px; padding:8px; transition: box-shadow .2s ease; }
+.block:hover { box-shadow:0 12px 24px rgba(0,0,0,.35); }
+.block img { width:48px; height:48px; display:block; }
+.prop { margin:10px 0; }
+.input { width:100%; padding:8px 10px; border-radius:10px; border:1px solid rgba(255,255,255,.18); background: rgba(0,0,0,.15); color:inherit; }
+.badge { display:inline-block; padding:3px 8px; border-radius:8px; font-weight:600; background:#ffffff14; border:1px solid #ffffff1e; }
+.ok { color: var(--ok); } .warn{color:var(--warn);} .err{color:var(--err);} 
+.btn { background:linear-gradient(180deg, #1eb5e8, #0e7ac0); color:white; border:0; border-radius:10px; padding:10px 14px; font-weight:700; }
+.btn:disabled { opacity:.5; cursor:not-allowed; }
+.btn.danger { background: linear-gradient(180deg, #ff6b6b, #d72638); }
+.actions { margin-top:14px; display:flex; gap:8px; flex-wrap:wrap; }
+.log { margin-top:14px; white-space:pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px; color:#cfd8ff; }

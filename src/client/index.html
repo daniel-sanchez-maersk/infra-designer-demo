@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Infra Designer</title>
+  <link rel="stylesheet" href="/client/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="panel sidebar">
+      <h3>Resources</h3>
+      <div class="grid">
+        <button class="panel res" data-kind="vpc"><img src="/icons/aws/Networking/Amazon-VPC.svg" alt=""/></button>
+        <button class="panel res" data-kind="subnet"><img src="/icons/aws/Networking/Amazon-VPC-Subnet.svg" alt=""/></button>
+        <button class="panel res" data-kind="sg"><img src="/icons/aws/Networking/Amazon-VPC-Security-Group.svg" alt=""/></button>
+        <button class="panel res" data-kind="ec2"><img src="/icons/aws/Compute/Amazon-EC2.svg" alt=""/></button>
+        <button class="panel res" data-kind="s3"><img src="/icons/aws/Storage/Amazon-S3.svg" alt=""/></button>
+      </div>
+      <div class="actions">
+        <button id="plan" class="btn">Plan</button>
+        <button id="apply" class="btn">Apply</button>
+        <button id="destroy" class="btn danger">Destroy All</button>
+      </div>
+      <div class="log" id="log"></div>
+    </aside>
+
+    <main class="panel canvas" id="canvas"></main>
+
+    <aside class="panel inspector">
+      <h3>Inspector</h3>
+      <div id="inspectorBody">Select a block</div>
+    </aside>
+  </div>
+
+  <script type="module" src="/client/main.js"></script>
+</body>
+</html>

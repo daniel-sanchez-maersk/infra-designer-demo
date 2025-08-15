@@ -1,0 +1,14 @@
+
+services:
+  app:
+    build:
+      context: .
+      platforms: ["linux/arm64"]
+    image: infra-designer:latest
+    ports: ["3000:3000"]
+    environment:
+      - AWS_REGION=eu-west-1
+      - AWS_PROFILE=default
+    volumes:
+      - ${HOME}/.aws:/home/node/.aws:ro
+      - ./state:/app/.tfwork
